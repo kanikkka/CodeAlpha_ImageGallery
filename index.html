@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Stories | Image Gallery</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Visual Stories</h1>
+            <p>Moments captured with creativity & passion</p>
+            <button onclick="scrollToGallery()">Explore Gallery</button>
+        </div>
+    </header>
+
+    <!-- FILTER BUTTONS -->
+    <section id="gallery-section">
+        <div class="filters">
+            <button class="active" onclick="filterImages('all')">All</button>
+            <button onclick="filterImages('nature')">Nature</button>
+            <button onclick="filterImages('city')">City</button>
+            <button onclick="filterImages('people')">People</button>
+        </div>
+
+        <!-- IMAGE GALLERY -->
+        <div class="gallery">
+            <div class="card nature" onclick="openLightbox(0)">
+                <img src="images/img1.jpg">
+                <div class="overlay">Nature Beauty</div>
+            </div>
+
+            <div class="card city" onclick="openLightbox(1)">
+                <img src="images/img2.jpg">
+                <div class="overlay">Urban Life</div>
+            </div>
+
+            <div class="card people" onclick="openLightbox(2)">
+                <img src="images/img3.jpg">
+                <div class="overlay">Human Emotions</div>
+            </div>
+
+            <div class="card nature" onclick="openLightbox(3)">
+                <img src="images/img4.jpg">
+                <div class="overlay">Wild Views</div>
+            </div>
+
+            <div class="card city" onclick="openLightbox(4)">
+                <img src="images/img5.jpg">
+                <div class="overlay">City Lights</div>
+            </div>
+
+            <div class="card people" onclick="openLightbox(5)">
+                <img src="images/img6.jpg">
+                <div class="overlay">Life Moments</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">×</span>
+        <button class="prev" onclick="prevImage()">❮</button>
+        <img id="lightbox-img">
+        <button class="next" onclick="nextImage()">❯</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
